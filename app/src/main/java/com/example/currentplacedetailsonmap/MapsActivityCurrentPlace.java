@@ -2,6 +2,7 @@ package com.example.currentplacedetailsonmap;
 
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -29,6 +30,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -170,6 +173,22 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     public void onMapReady(GoogleMap map) {
         mMap = map;
 
+        // Draw Circle
+//        double latitude = -33.87365;
+//        double longitude = 151.20689;
+//        Circle circle = map.addCircle(new CircleOptions()
+//                .center(new LatLng(latitude, longitude))
+//                .radius(10000)
+//                .strokeColor(Color.RED)
+//                .fillColor(Color.BLUE));
+
+//        mMap.addCircle(new CircleOptions()
+//                .center(new LatLng(mLastKnownLocation.getLatitude(), mLastKnownLocation.getLongitude()))
+//                .radius(100)
+//                .strokeColor(Color.RED)
+//                .fillColor(Color.BLUE));
+
+
         // Use a custom info window adapter to handle multiple lines of text in the
         // info window contents.
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
@@ -201,6 +220,19 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
 
         // Get the current location of the device and set the position of the map.
         getDeviceLocation();
+
+        double radiusInMeters = 500.0;
+        int strokeColor = 0xffff0000; //red outline
+        int shadeColor = 0x44ff0000; //opaque red fill
+
+        mMap.addCircle(new CircleOptions()
+                .center(new LatLng(mLastKnownLocation.getLatitude(), mLastKnownLocation.getLongitude()))
+                .radius(radiusInMeters)
+//                .strokeColor(Color.RED)
+//                .fillColor(Color.BLUE));
+                .strokeColor(strokeColor)
+                .fillColor(shadeColor));
+
     }
 
     /**
