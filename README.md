@@ -20,6 +20,6 @@ Features needs to implement
 - Abled person able to ask help in emergency situation from people present inside the circle by cliking 'Help' button
 - All user except abled person need to get notification that displayes 'Would you like to help this person' as soon as user cliks on notification app needed to be open and pops up Acept and Reject button, when user accept request that should show location of abled person and feedback needed to send back to abled person says 'Request accepted by person'
 
-- As soon as this process completes Abled person will cliks button 'Thank you' and again one more notification needed to send back to all uses inside the circle redius says 'Thank you'
+- As soon as this process completes Abled person will cliks button 'Thank you' and again one more notification needed to send back to all users inside the circle redius says 'Thank you'
 
 
