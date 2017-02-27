@@ -1,43 +1,25 @@
-Google Maps Android API Sample: Current Place Details
+GPSMitra is Simple android app for Abled persons
 =====================================================
 
-Prerequisites
---------------
+Intoduction
+-----------
+GPSMitra app will help abled persons to find other people on realtime google map by simply opening the application on there devices and allows to ask help from them in interactive way. Abled person can get help by just taping on 'Help' button which is present in the application that will notify to the other user with a short message displayed by 'Would you like to help this person?' within the radius of 1 km. If the person is able to help he just need to accept the notification request and he will get the abled person location on the application map. After that application send confirmation notification back to the abled person. Once the helping process finish application will rest to default map by tapping the 'Thank You' button on the application.
 
-- Android SDK v24
-- Latest Android Build Tools
-- Android Support Repository
+- Problem Statement :
+	  Finding nearby peoples in emergency situation for help to the   abled persons is the toughest task, GPSMitra mobile application will help in this situation to find the nearby people for help within 1km area(radius).
 
-Getting started
----------------
+- Conclusion :
+		GPSMitra is just a 10 days older application as of now which in beta version with a five features in it to help abled person. As application grows features will be added . GPSMitra is actively looking for Android and Apple IOS developer to contribute to this opensource mobile software application.
 
-This sample uses the Gradle build system.
 
-1. Download the samples by cloning this repository or downloading an archived
-  snapshot. (See the options at the top of the page.)
-1. In Android Studio, create a new project and choose the "Import non-Android Studio project" or
-  "Import Project" option.
-1. Select the `CurrentPlaceDetailsOnMap` directory that you downloaded with this repository.
-1. If prompted for a gradle configuration, accept the default settings.
-  Alternatively use the "gradlew build" command to build the project directly.
-1. Add your API key to your app's `gradle.properties` file.
-  (For information on getting an API key, see the
-  [documentation](https://developers.google.com/maps/documentation/android-api/signup).)
+Features needs to implement
+--------------------------
 
-Support
--------
+- Toggle button which allows user to switch between two activities 1-Abled person and 2-Normal person
+- All GPSMitra app needs to connect each othere in givien radius(1km)[Basicaly it has to show point's or marker in map  when they are comes inside  given redius of circle]
+- Abled person able to ask help in emergency situation from people present inside the circle by cliking 'Help' button
+- All user except abled person need to get notification that displayes 'Would you like to help this person' as soon as user cliks on notification app needed to be open and pops up Acept and Reject button, when user accept request that should show location of abled person and feedback needed to send back to abled person says 'Request accepted by person'
 
-- Stack Overflow: https://stackoverflow.com/questions/tagged/android+google-maps
+- As soon as this process completes Abled person will cliks button 'Thank you' and again one more notification needed to send back to all uses inside the circle redius says 'Thank you'
 
-If you have discovered an issue with the Google Maps Android API v2, please see
-the resources here: https://developers.google.com/maps/documentation/android-api/support
 
-If you've found an error in these samples, please file an issue:
-https://github.com/googlemaps/android-samples/issues
-
-![Analytics](https://ga-beacon.appspot.com/UA-12846745-20/android-samples-apidemos/readme?pixel)
-
-License
--------
-
-Please refer to the [LICENSE](https://github.com/googlemaps/android-samples/blob/master/LICENSE) at the root of this repo.
